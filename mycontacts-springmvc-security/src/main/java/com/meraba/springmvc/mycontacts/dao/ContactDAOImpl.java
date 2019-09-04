@@ -77,7 +77,7 @@ public class ContactDAOImpl implements ContactDAO {
 		// get the current hibernate session
 		Session currentSession = sessionFactory.getCurrentSession();
 				
-		// delete object with primary key
+		// update object with primary key
 		Query theQuery = 
 			currentSession.createQuery("update Contact set username=:userName where id=:contactId");
 		theQuery.setParameter("userName", userName);
